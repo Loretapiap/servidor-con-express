@@ -1,0 +1,15 @@
+{
+  "name": "coderhouse",
+  "version": "1.0.6",
+  "description": "Coderhouse - Clase 6",
+  "main": "app.js",
+  "scripts": {
+    "test": "node ./src/app.js"
+  },
+  "keywords": [],
+  "author": "Lorena Tapia",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
