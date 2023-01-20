@@ -130,12 +130,18 @@ class ProductManager {
       if (findProduct) {
         allProduct.splice(findProduct, 1);
         await fs.promises.writeFile(`./${this.path}`, JSON.stringify(content));
-        console.log(`Product ${id} deleted.`);
+        return {
+          code: 200,
+          message: `Product ${id} deleted.`
+        };
       } else {
-        console.error('Not found');
+        return {
+          code: 404,
+          message: `Product ${id} not found.`
+        };
       }
     } catch (error) {
-      console.log('deleteProduct: ', error);
+      return error;
     }
   }
 }
